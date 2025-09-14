@@ -4,13 +4,14 @@ print('--------JOCKENPÔ-------')
 print('Olá! Seja muito bem vindo ao jogo de jockenpô em python!\n')
 print('Deseja conhecer as regras do jogo?\nDigite 1 para Sim\nDigite 2 para Não')
 
-opcao = input('Sua opção: ').strip()
+opcao = input('Sua opção: ').strip()  # Variavel que da a opção do usuario escolher se quer ver as regras
 
 # Verificação para que o usuario digite apenas 1 e 2
 while opcao != '1' and opcao != '2':
     print('\nOpção inválida!\nDigite 1 para Sim\nDigite 2 para Não')
     opcao = input('Sua opção: ').strip()
 
+# Explicação das regras
 if opcao == '1':
     print('\nO jogo possui 3 simbolos, Pedra, Papel e Tesoura.')
     print('Os jogadores deveram escolher um desses 3 simbolos e fazer sua jogada.')
@@ -19,13 +20,12 @@ if opcao == '1':
     print('Papel ganha de Pedra')
 
 # Mostra as modalidades para o usuario e pergunta qual ele deseja
-
 print('\nNosso jogo possui as seguintes modadalides que NÂO podem ser alteradas após inicio do jogo.')
 print('1 - Humano vs Humano')
 print('2 - Humano vs Computador')
 print('3 - Computador vs Computador')
 
-opcao1 = input('Digite sua opção: ').strip()
+opcao1 = input('Digite sua opção: ').strip()  # Variavel para o usuario decidir a modalidade
 
 # Variaveis de pontuação de ambos os jogadores
 pontuacao1 = 0
@@ -42,8 +42,8 @@ if opcao1 == '1':
     print('1 - Pedra')
     print('2 - Papel')
     print('3 - Tesoura')
-    jogador1 = input('Jogador 1, digite sua opção: ').strip()
-    jogador2 = input('Jogador 2, digite sua opção: ').strip()
+    jogador1 = input('Jogador 1, digite sua opção: ').strip()   # Variavel para o primeiro jogador decidir sua jogada
+    jogador2 = input('Jogador 2, digite sua opção: ').strip()   # Variavel para o segundo jogador decidir sua jogada
 
     # Verificação para que o jogador 1 digite apenas 1 e 2
     while jogador1 != '1' and jogador1 != '2' and jogador1 != '3':
@@ -153,12 +153,12 @@ if opcao1 == '1':
             pontuacao2 += 1
             print(f'Placar: {pontuacao1} x {pontuacao2}')
 
-        # pergunta se o usuario deseja continuar jogando
+        # Pergunta se o usuario deseja continuar jogando
         print('\n1 - Continuar jogando')
         print('2 - Parar de jogar')
         continuar = input('Sua opção: ').strip()
 
-        # verificação para que o usuario digite apenas 1 ou 2
+        # Verificação para que o usuario digite apenas 1 ou 2
         while continuar != '1' and continuar != '2':
             continuar = input('Opção incorreta, digite 1 ou 2: ').strip()
 
